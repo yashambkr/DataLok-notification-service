@@ -1,0 +1,55 @@
+# Dependencies
+node_modules
+npm-debug.log
+pnpm-debug.log
+yarn-error.log
+
+# Build output
+dist
+build
+coverage
+
+# Tests
+*.spec.ts
+test
+*.test.ts
+
+# IDE and editor files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Environment files (keep .env.prod for production builds)
+.env
+.env.local
+.env.*.local
+!.env.prod
+
+# Documentation
+README.md
+*.md
+docs
+
+# CI/CD
+.github
+.gitlab-ci.yml
+.travis.yml
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Misc
+.prettierrc
+.eslintrc.js
+eslint.config.mjs
+.editorconfig
