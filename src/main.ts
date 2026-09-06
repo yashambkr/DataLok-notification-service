@@ -13,7 +13,12 @@ async function bootstrap() {
   logger.setContext('Bootstrap');
 
   // Enable CORS with origin from environment variable
-  const corsOrigin = configService.get<string>('cors.origin') || '*';
+  const rawCorsOrigin = configService.get<string>('cors.origin');
+  const corsOrigin = rawCorsOrigin
+    ? rawCorsOrigin.includes(',')
+      ? rawCorsOrigin.split(',').map((o) => o.trim())
+      : rawCorsOrigin
+    : '*';
   app.enableCors({
     origin: corsOrigin,
     credentials: true,
