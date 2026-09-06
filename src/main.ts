@@ -33,7 +33,7 @@ async function bootstrap() {
 
   // Setup Swagger documentation
   const config = new DocumentBuilder()
-    .setTitle('Notification Service API')
+    .setTitle('Sanchay Notification Service API')
     .setDescription('Real-time notification service with WebSocket and REST API support')
     .setVersion('1.0')
     .addBearerAuth(
